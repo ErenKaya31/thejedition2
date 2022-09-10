@@ -393,11 +393,6 @@ class PlayState extends MusicBeatState
 
 	var comboCounterTxt:FlxText;
 
-	var totalNotesTxt:FlxText;
-
-
-	var tnh:Int = 0;
-
 	var disableTheTextAt:Int;
 	var textIsGoing:Bool = false;
 
@@ -1118,7 +1113,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 		if(SONG.credit != null) {
-			watermarkTxt = new FlxText(10, FlxG.height - 28, 0, 'By ' + SONG.credit + ' - ' + SONG.song + " - " + CoolUtil.difficultyString() + " - Strident Engine", 74);
+			watermarkTxt = new FlxText(10, FlxG.height - 28, 0, 'By ' + SONG.credit + ' - ' + SONG.song + " - " + CoolUtil.difficultyString() + " - The J Edition", 74);
 			watermarkTxt.scrollFactor.set();
 			watermarkTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			watermarkTxt.size = 18;
@@ -1127,7 +1122,7 @@ class PlayState extends MusicBeatState
 			add(watermarkTxt);
 		}
 		else {
-			watermarkTxt = new FlxText(10, FlxG.height - 28, 0, SONG.song + " - " + CoolUtil.difficultyString() + " - Strident Engine", 74);
+			watermarkTxt = new FlxText(10, FlxG.height - 28, 0, SONG.song + " - " + CoolUtil.difficultyString() + " - The J Edition", 74);
 			watermarkTxt.scrollFactor.set();
 			watermarkTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			watermarkTxt.size = 18;
@@ -1201,12 +1196,6 @@ class PlayState extends MusicBeatState
 		comboCounterTxt.size = 18;
 		add(comboCounterTxt);
 
-		totalNotesTxt = new FlxText(10, FlxG.height - 264, 0, "Total Notes Hit: " + tnh, 70);
-		totalNotesTxt.scrollFactor.set();
-		totalNotesTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		totalNotesTxt.size = 18;
-		add(totalNotesTxt);
-
 
 
 		strumLineNotes.cameras = [camHUD];
@@ -1218,7 +1207,6 @@ class PlayState extends MusicBeatState
 		goodCounterTxt.cameras = [camHUD];
 		shitCounterTxt.cameras = [camHUD];
 		comboCounterTxt.cameras = [camHUD];
-		totalNotesTxt.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
@@ -2320,14 +2308,12 @@ Lib.application.window.resize(width, height);*/
 		badCounterTxt.text = 'Bads: ' + badCounter;
 		shitCounterTxt.text = 'Shits: ' + shitCounter;
 		comboCounterTxt.text = 'Combo: ' + combo;
-		tnh = sickCounter + goodCounter + badCounter + shitCounter;
-		totalNotesTxt.text = 'Total Notes Hit: ' + tnh;
 
 
 		if(ratingString == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Rating: ' + ratingString;
+			scoreTxt.text = 'Score: ' + songScore + ' | Skill Issue: ' + songMisses + ' | Accuracy: ' + ratingString;
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Rating: ' + ratingString + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;
+			scoreTxt.text = 'Score: ' + songScore + ' | Skill Issue: ' + songMisses + ' | Accuracy: ' + ratingString + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;
 		}
 
 		if(cpuControlled) {
