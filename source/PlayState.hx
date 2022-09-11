@@ -151,16 +151,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['Horribly Shit', 0.2], //From 0% to 19%
-		['Done For', 0.4], //From 20% to 39%
-		['Bad', 0.5], //From 40% to 49%
-		['Ok', 0.6], //From 50% to 59%
-		['Eh', 0.69], //From 60% to 68%
-		[':)', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['Great', 0.9], //From 80% to 89%
-		['Nice!', 1], //From 90% to 99%
-		['PERFECT!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['are you new or you are shit at this?', 0.2], //From 0% to 19%
+		['holy fuck', 0.4], //From 20% to 39%
+		['trash', 0.5], //From 40% to 49%
+		['bad', 0.6], //From 50% to 59%
+		['uhhh', 0.69], //From 60% to 68%
+		['funny 69 lol', 0.7], //69%
+		['dam fam', 0.8], //From 70% to 79%
+		['cool', 0.9], //From 80% to 89%
+		['dayum', 1], //From 90% to 99%
+		['SUPER COOL!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	#if (haxe >= "4.0.0")
@@ -1159,8 +1159,8 @@ class PlayState extends MusicBeatState
 				screwYouTxt.alpha = 0;
 			}
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "you suck you are badddd skill issue", 32);
+		botplayTxt.setFormat(Paths.font("vcr.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
