@@ -53,7 +53,7 @@ class FreeplayState extends MusicBeatState
 		WeekData.reloadWeekFiles(false);
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("In the Freeplay", null);
 		#end
 
 		for (i in 0...WeekData.weeksList.length) {
@@ -113,7 +113,7 @@ class FreeplayState extends MusicBeatState
 
 			// songText.x += 40;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-			// songText.screenCenter(X);
+			// screenCenter(X);
 		}
 		WeekData.setDirectoryFromWeek();
 
