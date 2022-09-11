@@ -148,7 +148,7 @@ class FunkinLua {
 		set('lowQuality', ClientPrefs.lowQuality);
 
 		//stuff 4 noobz like you B)
-		Lua_helper.add_callback(lua, "getProperty", function(variable:String) {
+		Lua_helper._callback(lua, "getProperty", function(variable:String) {
 			var killMe:Array<String> = variable.split('.');
 			if(killMe.length > 1) {
 				var coverMeInPiss:Dynamic = null;
@@ -246,7 +246,7 @@ class FunkinLua {
 			return Reflect.setProperty(Type.resolveClass(classVar), variable, value);
 		});
 
-		Lua_helper.add_callback(lua, "addWavyShader", function(tag:String) {
+		Lua_helper.add_callback(lua, "wavyBgThisMf", function(tag:String) {
 			if(lePlayState.modchartSprites.exists(tag)) {
 				var shit:ModchartSprite = lePlayState.modchartSprites.get(tag);
 				shit.shader = PlayState.the3DWorldEffect.shader;
