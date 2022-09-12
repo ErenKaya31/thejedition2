@@ -980,7 +980,7 @@ class PlayState extends MusicBeatState
 		strumLine.scrollFactor.set();
 
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 20, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.BLUE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -1107,7 +1107,7 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.BLUE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
@@ -1115,7 +1115,7 @@ class PlayState extends MusicBeatState
 		if(SONG.credit != null) {
 			watermarkTxt = new FlxText(10, FlxG.height - 28, 0, 'By ' + SONG.credit + ' - ' + SONG.song + " - " + CoolUtil.difficultyString() + " - The J Edition", 74);
 			watermarkTxt.scrollFactor.set();
-			watermarkTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			watermarkTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			watermarkTxt.size = 18;
 			watermarkTxt.updateHitbox();
 			watermarkTxt.alpha = 0.6;
@@ -1124,7 +1124,7 @@ class PlayState extends MusicBeatState
 		else {
 			watermarkTxt = new FlxText(10, FlxG.height - 28, 0, SONG.song + " - " + CoolUtil.difficultyString() + " - The J Edition", 74);
 			watermarkTxt.scrollFactor.set();
-			watermarkTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			watermarkTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			watermarkTxt.size = 18;
 			watermarkTxt.updateHitbox();
 			watermarkTxt.alpha = 0.6;
@@ -1135,7 +1135,7 @@ class PlayState extends MusicBeatState
 			{
 				screwYouTxt = new FlxText(10, FlxG.height - 28, 0, SONG.screwYou, 74);
 				screwYouTxt.scrollFactor.set();
-				screwYouTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				screwYouTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 				screwYouTxt.size = 18;
 				screwYouTxt.updateHitbox();
 				screwYouTxt.alpha = 0.6;
@@ -1146,7 +1146,7 @@ class PlayState extends MusicBeatState
 		else {
 			screwYouTxt = new FlxText(10, FlxG.height - 28, 0, null, 74);
 			screwYouTxt.scrollFactor.set();
-			screwYouTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			screwYouTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			screwYouTxt.size = 18;
 			screwYouTxt.updateHitbox();
 			screwYouTxt.alpha = 0.6;
@@ -1160,7 +1160,7 @@ class PlayState extends MusicBeatState
 			}
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "you suck you are badddd skill issue", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
+		botplayTxt.setFormat(Paths.font("vcr.ttf"), 40, FlxColor.BLUE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -1171,28 +1171,28 @@ class PlayState extends MusicBeatState
 		
 		sickCounterTxt = new FlxText(10, FlxG.height - 204, 0, "Sicks!: " + sickCounter, 50);
 		sickCounterTxt.scrollFactor.set();
-		sickCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		sickCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		sickCounterTxt.size = 18;
 		add(sickCounterTxt);
 		goodCounterTxt = new FlxText(10, FlxG.height - 184, 0, "Goods: " + goodCounter, 50);
 		goodCounterTxt.scrollFactor.set();
-		goodCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		goodCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		goodCounterTxt.size = 18;
 		add(goodCounterTxt);
 		badCounterTxt = new FlxText(10, FlxG.height - 164, 0, "Bads: " + badCounter, 50);
 		badCounterTxt.scrollFactor.set();
-		badCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		badCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		badCounterTxt.size = 18;
 		add(badCounterTxt);
 		shitCounterTxt = new FlxText(10, FlxG.height - 144, 0, "Shits: " + shitCounter, 50);
 		shitCounterTxt.scrollFactor.set();
-		shitCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		shitCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		shitCounterTxt.size = 18;
 		add(shitCounterTxt);
 
 		comboCounterTxt = new FlxText(10, FlxG.height - 244, 0, "Combo: " + combo, 70);
 		comboCounterTxt.scrollFactor.set();
-		comboCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		comboCounterTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		comboCounterTxt.size = 18;
 		add(comboCounterTxt);
 
